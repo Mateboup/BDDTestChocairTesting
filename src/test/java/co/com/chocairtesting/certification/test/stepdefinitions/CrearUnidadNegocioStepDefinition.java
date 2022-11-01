@@ -6,6 +6,7 @@ import static org.hamcrest.core.IsEqual.equalTo;
 
 import co.com.chocairtesting.certification.test.questions.ValidarReunionAgendada;
 import co.com.chocairtesting.certification.test.tasks.AgendarReunion;
+import co.com.chocairtesting.certification.test.tasks.CrearUnidad;
 import co.com.chocairtesting.certification.test.tasks.IniciarSesion;
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Dado;
@@ -23,7 +24,7 @@ public class CrearUnidadNegocioStepDefinition {
   @Cuando("el usuario cree una nueva unidad de negocio con nombre {string} con el negocio {string}")
   public void elUsuarioCreeUnaNuevaUnidadDeNegocioConNombreConElNegocio(
       String nombreUnidadNegocio, String negocio) {
-    // theActorInTheSpotlight().attemptsTo(CrearUnidad.deNegocio(nombreUnidadNegocio, negocio));
+    theActorInTheSpotlight().attemptsTo(CrearUnidad.deNegocio(nombreUnidadNegocio, negocio));
   }
 
   @Y("agende una reunión")

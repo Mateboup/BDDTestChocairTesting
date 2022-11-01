@@ -1,19 +1,21 @@
 package co.com.chocairtesting.certification.test.questions;
 
+import static net.serenitybdd.screenplay.questions.Text.of;
+
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.targets.Target;
 
-public class ValidarReunionAgendada implements Question {
-  private Target message;
+public class ValidarReunionAgendada implements Question<String> {
+  private Target mensaje;
 
   public ValidarReunionAgendada(Target message) {
-    this.message = message;
+    this.mensaje = message;
   }
 
   @Override
-  public Object answeredBy(Actor actor) {
-    return actor.recall("POST_SUCCESSFUL").equals(" Why Fintech in Latin America Is Having a Boom");
+  public String answeredBy(Actor actor) {
+    return of(mensaje).viewedBy(actor).asString();
   }
 
   public static ValidarReunionAgendada conLaData(Target message) {

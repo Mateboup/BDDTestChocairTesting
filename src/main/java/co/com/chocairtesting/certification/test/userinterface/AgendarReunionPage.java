@@ -48,7 +48,8 @@ public final class AgendarReunionPage {
       Target.the("Buscar Reunion Agendada")
           .located(xpath("//*[@id=\"GridDiv\"]//*[@placeholder=\"search...\"]"));
   public static final Target LBL_REUNION_AGENDADA =
-      Target.the("Validar Reunion Agendada").located(xpath("//*[contains(text(),'{0}')]\");"));
+      Target.the("Validar Reunion Agendada")
+          .located(xpath("//*[@id=\"GridDiv\"]/div[3]/div[5]/div/div/div[2]/a"));
 
   private AgendarReunionPage() {}
 }
